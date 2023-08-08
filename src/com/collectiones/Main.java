@@ -1,17 +1,43 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+package com.collectiones;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        /**Stack */
+        /*Stack stack = new Stack();
+        stack.push("java");
+        stack.push("html");
+        stack.push("c++");
+        stack.push("c#");
+        System.out.println(stack.size());
+        System.out.println(stack.pop());
+        System.out.println(stack.peek());*/
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        /**LinkedList
+
+        LinkedList linkedList=new LinkedList();
+        linkedList.insert("java");
+        linkedList.insert("c++");
+        linkedList.insert("c#");
+        linkedList.insert("php");
+        //linkedList.insertAtFirst("python");
+        //linkedList.insertAt(1,"html");
+        linkedList.remove(2);
+        linkedList.show();
+        System.out.println("----------------------");
+        System.out.println(linkedList.search("c++"));
+         */
+
+        Queue queue = new Queue();
+        queue.enQueue("java");
+        queue.enQueue("c#");
+        queue.enQueue("js");
+        queue.show();
+        System.out.println("--------------------------");
+        queue.deQueue();
+        queue.show();
+        System.out.println("--------------------------");
+        queue.deQueue();
+        queue.show();
     }
 }
