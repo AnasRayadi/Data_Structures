@@ -1,13 +1,15 @@
 package com.collectiones;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Stack {
-    String[] arrayData;
+    String[] arrayData ;
+    ArrayList newArray = new ArrayList();
     int top;
     static final int DEFAULT_CAPACITY=10;
     public Stack(){
-        arrayData = new String[DEFAULT_CAPACITY];
+        arrayData =  new String[DEFAULT_CAPACITY];
         int top = -1;
     }
     public void push(String data){

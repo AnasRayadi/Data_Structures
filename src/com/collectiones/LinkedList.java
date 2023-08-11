@@ -1,59 +1,79 @@
 package com.collectiones;
 
-public class LinkedList {
-    Node head;
-    public void insert(String data){
-        Node newNode = new Node();
+public class LinkedList<E> {
+    Node<E> head;
+    int size;
+    public void insert(E data){
+        Node<E> newNode = new Node();
         newNode.data=data;
         newNode.next=null;
         if (head==null){
             head=newNode;
         }
         else {
-            Node node = head;
+            Node<E> node = head;
             while (node.next != null){
                 node=node.next;
             }
             node.next=newNode;
         }
+        size++;
     }
-    public void insertAtFirst(String data){
-        Node node = new Node();
+    public void insertAtFirst(E data){
+        Node<E> node = new Node();
         node.data = data;
         node.next = head;
         head = node;
+        size++;
     }
-    public void insertAt(int pos,String data){
-        Node newNode = new Node();
+    public void insertAt(int pos,E data){
+        Node<E> newNode = new Node();
         newNode.data = data;
         if (pos == 0){
             insertAtFirst(data);
         }
         else {
-            Node node = head;
+            Node<E> node = head;
             for (int i = 0; i < pos-1; i++) {
                 node=node.next;
             }
             newNode.next = node.next;
             node.next = newNode;
         }
+        size++;
     }
     public void remove(int index){
         if (index==0){
             head=head.next;
         }
         else {
-            Node node=head;
-            Node removedNode=null;
+            Node<E> node=head;
+            Node<E> removedNode=null;
             for(int i=0;i<index-1;i++) {
                 node = node.next;
             }
             removedNode=node.next;
             node.next=removedNode.next;
         }
+        size--;
     }
-    public boolean search(String data){
-        Node node=head;
+
+    public E getFirst() {
+        return head.data;
+    }
+
+    public Node<E> getLast(){
+        if (size != 0){
+            Node<E> node = head;
+            for (int i = 0; i < size-1; i++) {
+                node = node.next;
+            }
+            return node;
+        }
+        return null;
+    }
+    public boolean contains(E data){
+        Node<E> node=head;
         while (node.next.data != data){
             node = node.next;
         }
@@ -62,8 +82,11 @@ public class LinkedList {
         }
         return false;
     }
+    public int size(){
+        return size;
+    }
     public void show(){
-        Node node = head;
+        Node<E> node = head;
         while (node.next != null){
             System.out.println(node.data);
             node = node.next;

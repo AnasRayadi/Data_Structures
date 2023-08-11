@@ -1,7 +1,7 @@
 package com.collectiones;
 
-public class Node {
-    String data;
-    Person person;
-    Node next;
+public class Node<E> {
+    E data;
+    Node<E> next;
+    Node<E> prev;
 }

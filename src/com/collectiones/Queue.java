@@ -2,12 +2,13 @@ package com.collectiones;
 
 import java.util.Arrays;
 
-public class Queue {
+public class Queue<E> {
     int front = 0;
     int rear = -1;
     int size = 0;
     static final int DEFAULT_CAPACITY = 10;
     String queue[] = new String[DEFAULT_CAPACITY];
+
     public void enQueue(String data){
         ensureCapacity();
         rear = (rear+1) % queue.length;

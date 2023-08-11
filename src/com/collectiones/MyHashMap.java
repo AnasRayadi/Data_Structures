@@ -44,7 +44,7 @@ public class MyHashMap<K,V> {
             e.next = new Entry<K,V>(key, value);
         }
     }
-    public V findValue(K key){
+    public V find(K key){
         int hash = (key.hashCode()) % SIZE;
         Entry<K,V> e = table[hash];
         if (e == null){
