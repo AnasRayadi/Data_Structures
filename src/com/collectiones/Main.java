@@ -1,5 +1,9 @@
 package com.collectiones;
 
+import java.util.Collection;
+
+
+
 public class Main {
     public static void main(String[] args) {
         /**Stack using array*/
@@ -51,6 +55,7 @@ public class Main {
 
         /**Doubly LinkedList */
         /*
+        DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
         DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
         doublyLinkedList.insert("java");
         doublyLinkedList.insert("c++");
@@ -107,8 +112,10 @@ public class Main {
         hashMap.put("name1","Rayadi");
         hashMap.put("name3","Last Name1");
         hashMap.put("name4","Last Name2");
-        System.out.println(hashMap.find("ame4"));
-         */
+        System.out.println(hashMap.find("name1"));
+        System.out.println(hashMap.find("name3"));
+        System.out.println(hashMap.find("name4"));
+        */
 
 
 

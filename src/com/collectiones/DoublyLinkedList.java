@@ -68,15 +68,18 @@ public class DoublyLinkedList<E> {
                 System.out.println(removedNode.data + " Has been deleted!");
             }
             size--;
-        }catch (NullPointerException e){System.out.println(e.getMessage());}
+        }catch (NullPointerException e){throw new NullPointerException();}
     }
     public void display(){
-        Node<E> node = head;
-        while (node.next != null){
+        try {
+            Node<E> node = head;
+            while (node.next != null) {
+                System.out.println(node.data);
+                node = node.next;
+            }
             System.out.println(node.data);
-            node = node.next;
-        }
-        System.out.println(node.data);
+        }catch (Exception e){
+            System.out.println(e.getMessage());}
     }
 
     public boolean isEmpty() {

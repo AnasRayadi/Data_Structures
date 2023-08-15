@@ -58,7 +58,8 @@ public class LinkedList<E> {
             }
             size--;
         }catch (NullPointerException e){
-            System.out.println(e.getMessage());
+
+            throw new NullPointerException();
         }
     }
 
