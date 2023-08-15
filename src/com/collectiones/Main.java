@@ -12,6 +12,7 @@ public class Main {
         System.out.println(stack.pop());
         System.out.println(stack.peek());*/
 
+
         /**Stack using linked-list */
         /*
         StackUsingLinkedList stack = new StackUsingLinkedList();
@@ -59,11 +60,12 @@ public class Main {
         doublyLinkedList.insertAt(3,"html");
         System.out.println("Size : "+doublyLinkedList.size());
         doublyLinkedList.display();
-        doublyLinkedList.remove(2);
-        doublyLinkedList.remove(3);
+        //doublyLinkedList.remove(2);
+        doublyLinkedList.remove(7);
         System.out.println("Size : "+doublyLinkedList.size());
         doublyLinkedList.display();
-        */
+         */
+
 
 
         /**Queue */
@@ -87,7 +89,7 @@ public class Main {
         queue.show();*/
 
         /**Generic Queue Using Nodes*/
-
+        /*
         GenericQueue queue = new GenericQueue();
         queue.enqueue(1);
         queue.enqueue("c#");
@@ -97,6 +99,7 @@ public class Main {
         System.out.println("--------------------------");
         System.out.println("dequeue: "+queue.dequeue());
         queue.show();
+         */
         /**HashMap */
         /*
         MyHashMap hashMap = new MyHashMap<>();

@@ -43,19 +43,23 @@ public class LinkedList<E> {
         size++;
     }
     public void remove(int index){
-        if (index==0){
-            head=head.next;
-        }
-        else {
-            Node<E> node=head;
-            Node<E> removedNode=null;
-            for(int i=0;i<index-1;i++) {
-                node = node.next;
+        try {
+            if (index==0){
+                head=head.next;
             }
-            removedNode=node.next;
-            node.next=removedNode.next;
+            else {
+                Node<E> node=head;
+                Node<E> removedNode=null;
+                for(int i=0;i<index-1;i++) {
+                    node = node.next;
+                }
+                removedNode=node.next;
+                node.next=removedNode.next;
+            }
+            size--;
+        }catch (NullPointerException e){
+            System.out.println(e.getMessage());
         }
-        size--;
     }
 
     public E getFirst() {

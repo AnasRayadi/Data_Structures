@@ -2,6 +2,7 @@ package com.collectiones;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.EmptyStackException;
 
 public class Stack {
     String[] arrayData ;
@@ -41,7 +42,7 @@ public class Stack {
         }
         else
         {
-            item = arrayData[top];
+        item = arrayData[top];
             arrayData[top] = null;
             top--;
             shrinkCapacity();

@@ -49,25 +49,26 @@ public class DoublyLinkedList<E> {
         size++;
     }
     public void remove(int index){
-        Node<E> removedNode;
-        if (index == 0){
-            removedNode = head;
-            head = head.next;
-            head.next.prev = null;
-            System.out.println(removedNode.data + " Has been deleted!");
-        }
-        else {
-            Node<E> node = head;
-            for (int i = 0; i <index-1 ; i++) {
-                node = node.next;
+        try {
+            Node<E> removedNode;
+            if (index == 0){
+                removedNode = head;
+                head = head.next;
+                head.next.prev = null;
+                System.out.println(removedNode.data + " Has been deleted!");
             }
-            removedNode = node.next;
-            node.next = removedNode.next;
-            removedNode.next.prev = node;
-            System.out.println(removedNode.data + " Has been deleted!");
-        }
-        size--;
-
+            else {
+                Node<E> node = head;
+                for (int i = 0; i <index-1 ; i++) {
+                    node = node.next;
+                }
+                removedNode = node.next;
+                node.next = removedNode.next;
+                removedNode.next.prev = node;
+                System.out.println(removedNode.data + " Has been deleted!");
+            }
+            size--;
+        }catch (NullPointerException e){System.out.println(e.getMessage());}
     }
     public void display(){
         Node<E> node = head;

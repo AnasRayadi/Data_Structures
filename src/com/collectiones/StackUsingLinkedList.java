@@ -3,15 +3,15 @@ package com.collectiones;
 public class StackUsingLinkedList<E> {
     LinkedList linkedList = new LinkedList();
     public void push(E item){
-        linkedList.insertAtFirst(item);
+        linkedList.insert(item);
     }
     public E pop(){
-            E removedItem = (E) linkedList.getFirst();
-            linkedList.remove(linkedList.size() - linkedList.size());
+            E removedItem = (E) linkedList.getLast();
+            linkedList.remove(linkedList.size()-1);
             return removedItem;
     }
     public E peek(){
-        return (E) linkedList.getFirst();
+        return (E) linkedList.getLast();
     }
     public int size(){
         return linkedList.size();
